@@ -1,0 +1,30 @@
+
+
+#board {
+	background-color: yellow;
+
+}
+
+.top {
+	float: left;
+	height: 200px;
+	width: 200px;
+	border-bottom: 2px solid black;
+	border-bottom: 2px solid black;
+
+}
+.middle {
+		float: left;
+	height: 200px;
+	width: 200px;
+
+
+}
+.bottom {
+		float: left;
+	height: 200px;
+	width: 200px;
+	border-bottom: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
