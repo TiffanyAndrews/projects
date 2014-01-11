@@ -30,7 +30,7 @@ function init() {
 var X = true;
 // Array of id names of divs/cells
 var nums = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-// Array of spaces that will change/moves
+// Array of spaces that will change/square
 var square = [[null,null,null],[null,null,null],[null,null,null]];
 // for loop, loops through each cell (9 of them) by name
 
@@ -51,7 +51,7 @@ function clickstuff(){
   // checks each variable in nums to see which one was clicked
   for(var i in nums) {
   if (this.id == nums[i]){
-      // figures out which row and column [][], referencing the var moves and saves as x
+      // figures out which row and column [][], referencing the var square and saves as x
       square [Math.floor(i / 3)][i % 3] = "X";
   }
 }
@@ -80,32 +80,32 @@ checkWin();
 }
 
 function checkWin(){
-  if (moves [0][0]=="x" && moves [1][0]=="x" && moves [2][0]=="x"){
+  if (square [0][0]=="x" && square [1][0]=="x" && square [2][0]=="x"){
     alert("X wins!")}
-  else if (moves [0][1]=="x" && moves [1][1]=="x" && moves [2][1]=="x"){
+  else if (square [0][1]=="x" && square [1][1]=="x" && square [2][1]=="x"){
     alert("X wins!")}  
-  else if (moves [0][2]=="x" && moves [1][2]=="x" && moves [2][2]=="x"){
+  else if (square [0][2]=="x" && square [1][2]=="x" && square [2][2]=="x"){
     alert("X wins!")}
-  else if (moves [0][0]=="o" && moves [1][0]=="o" && moves [2][0]=="o"){
+  else if (square [0][0]=="o" && square [1][0]=="o" && square [2][0]=="o"){
     alert("O wins!")}
-  else if (moves [0][1]=="o" && moves [1][1]=="o" && moves [2][1]=="o"){
+  else if (square [0][1]=="o" && square [1][1]=="o" && square [2][1]=="o"){
     alert("O wins!")}
-  else if (moves [0][2]=="o" && moves [1][2]=="o" && moves [2][2]=="o"){
+  else if (square [0][2]=="o" && square [1][2]=="o" && square [2][2]=="o"){
     alert("O wins!")}
-  else if (moves [0][0]=="x" && moves [0][1]=="x" && moves [0][2]=="x"){
+  else if (square [0][0]=="x" && square [0][1]=="x" && square [0][2]=="x"){
     alert("X wins!")}
-  else if (moves [1][0]=="x" && moves [1][1]=="x" && moves [1][2]=="x"){
+  else if (square [1][0]=="x" && square [1][1]=="x" && square [1][2]=="x"){
     alert("X wins!")}
-  else if (moves [2][0]=="x" && moves [2][1]=="x" && moves [2][2]=="x"){
+  else if (square [2][0]=="x" && square [2][1]=="x" && square [2][2]=="x"){
     alert("X wins!")}
-  else if (moves [0][0]=="o" && moves [0][1]=="o" && moves [0][2]=="o"){
+  else if (square [0][0]=="o" && square [0][1]=="o" && square [0][2]=="o"){
     alert("O wins!")}
-  else if (moves [1][0]=="o" && moves [1][1]=="o" && moves [1][2]=="o"){
+  else if (square [1][0]=="o" && square [1][1]=="o" && square [1][2]=="o"){
     alert("O wins!")}
-  else if (moves [2][0]=="o" && moves [2][1]=="o" && moves [2][2]=="o"){
+  else if (square [2][0]=="o" && square [2][1]=="o" && square [2][2]=="o"){
     alert("O wins!")}
-  else if (moves [0][0]=="o" && moves [1][1]=="o" && moves [2][2]=="o"){
+  else if (square [0][0]=="o" && square [1][1]=="o" && square [2][2]=="o"){
     alert("O wins!")}
-  else if (moves [2][0]=="o" && moves [1][1]=="o" && moves [0][2]=="o"){
+  else if (square [2][0]=="o" && square [1][1]=="o" && square [0][2]=="o"){
     alert("O wins!")}
 }
