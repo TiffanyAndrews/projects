@@ -26,90 +26,86 @@ function init() {
 		this.innerHTML = playerTurn;
 	}
 	
-/*
-var X = true
-// Array of  id names of div/cells
-var nums = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-// Array of spaces that will change.
-var moves = [[null,null,null],[null,null,null],[null,null,null]]
-//for loop loops through cell (9 of them) by name
-for (var i in nums) 
-// when you click, finds cell by name and makes it clickable and calls
-	document.getElementsById(nums[i]).onclick = clickStuff;
+// initially will be X
+var X = true;
+// Array of id names of divs/cells
+var nums = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+// Array of spaces that will change/moves
+var square = [[null,null,null],[null,null,null],[null,null,null]];
+// for loop, loops through each cell (9 of them) by name
 
+for(var i in nums) 
+  // when you click, finds cell by name and makes it clickable and calls the clickstuff function
+document.getElementById(nums[i]).onclick = clickstuff();
 
-function clickStuff(){
-//defines function, 
-	if (this.innerHTML == " "){
-//makes sure there is nothing in cell
-//this =" THE DIV" --what is assigned on line 38
-// if you had set line 38 = image, "this" would refer to "THE IMAGE"
-		if (X)
-		{
-			this.innerHTML = "X";
-			for(var i in nums)
-			{
-				if (this.id == nums[i])
-					moves [Math.floor(i/3)][i % 3] = "x"
-// after putting image to X, switches to O	.Math.floor(i/3)] lets you what row.[i % 3]tells you what column.			
-				X = true
-// after X, next O
-			}
-		}
-		else {
-			this.innerHTML = "O";
-			for(var i in nums)
-			{
-				if(this.id == nums[i])
-// for all the nine space it is checking to see which one has been click.
-					moves[MAth.floor(i/3)][i % 3] = "o"
-				O =false;
-			}
-		}
-	}
+// defines function
+function clickstuff(){
+  // makes sure there is nothing in cell
+  // this = "THE DIV" -- whatever is assigned on line 11
+  // if you had set line 11 = image, "this" would refer to "THE IMAGE"
+  alert("u here?")
+  if (this.innerHTML== ""){ 
+  if (X)
+  {
+  this.innerHTML="X";
+  // checks each variable in nums to see which one was clicked
+  for(var i in nums) {
+  if (this.id == nums[i]){
+      // figures out which row and column [][], referencing the var moves and saves as x
+      square [Math.floor(i / 3)][i % 3] = "X";
+  }
+}
+// after putting image to olive, switches to mushroom
+X = false; 
+}
+    // if not olive, then mushroom
+    else {
+    this.innerHTML='O';
 
+    for(var i in nums) {
+
+    if (this.id == nums[i]) {
+    square [Math.floor(i / 3)][i % 3] = "O";
+    }
+    }
+  // after mushroom, next one will be olive
+  X = true;
+}
 }
 else {
-	alert("nope");
+alert("nope");
 }
+// checkWin function is called
 checkWin();
 }
 
 function checkWin(){
-  if (moves [0][0]=="x" && moves [1][0]=="x" && moves [2][0]=="x")
-    alert("X wins!")
-  if (moves [0][1]=="x" && moves [1][1]=="x" && moves [2][1]=="x")
-    alert("X wins!")
-  if (moves [0][2]=="x" && moves [1][2]=="x" && moves [2][2]=="x")
-    alert("X wins!")
-
-  if (moves [0][0]=="o" && moves [1][0]=="o" && moves [2][0]=="o")
-    alert("O wins!")
-  if (moves [0][1]=="o" && moves [1][1]=="o" && moves [2][1]=="o")
-    alert("O wins!")
-  if (moves [0][2]=="o" && moves [1][2]=="o" && moves [2][2]=="o")
-    alert("O wins!")
-
-  if (moves [0][0]=="x" && moves [0][1]=="x" && moves [0][2]=="x")
-    alert("X wins!")
-  if (moves [1][0]=="x" && moves [1][1]=="x" && moves [1][2]=="x")
-    alert("X wins!")
-  if (moves [2][0]=="x" && moves [2][1]=="x" && moves [2][2]=="x")
-    alert("X wins!")
-
-  if (moves [0][0]=="o" && moves [0][1]=="o" && moves [0][2]=="o")
-    alert("O wins!")
-  if (moves [1][0]=="o" && moves [1][1]=="o" && moves [1][2]=="o")
-    alert("O wins!")
-  if (moves [2][0]=="o" && moves [2][1]=="o" && moves [2][2]=="o")
-    alert("O wins!")
-
-  if (moves [0][0]=="o" && moves [1][1]=="o" && moves [2][2]=="o")
-    alert("O wins!")
-  if (moves [2][0]=="o" && moves [1][1]=="o" && moves [0][2]=="o")
-    alert("O wins!")
-
- 
+  if (moves [0][0]=="x" && moves [1][0]=="x" && moves [2][0]=="x"){
+    alert("X wins!")}
+  else if (moves [0][1]=="x" && moves [1][1]=="x" && moves [2][1]=="x"){
+    alert("X wins!")}  
+  else if (moves [0][2]=="x" && moves [1][2]=="x" && moves [2][2]=="x"){
+    alert("X wins!")}
+  else if (moves [0][0]=="o" && moves [1][0]=="o" && moves [2][0]=="o"){
+    alert("O wins!")}
+  else if (moves [0][1]=="o" && moves [1][1]=="o" && moves [2][1]=="o"){
+    alert("O wins!")}
+  else if (moves [0][2]=="o" && moves [1][2]=="o" && moves [2][2]=="o"){
+    alert("O wins!")}
+  else if (moves [0][0]=="x" && moves [0][1]=="x" && moves [0][2]=="x"){
+    alert("X wins!")}
+  else if (moves [1][0]=="x" && moves [1][1]=="x" && moves [1][2]=="x"){
+    alert("X wins!")}
+  else if (moves [2][0]=="x" && moves [2][1]=="x" && moves [2][2]=="x"){
+    alert("X wins!")}
+  else if (moves [0][0]=="o" && moves [0][1]=="o" && moves [0][2]=="o"){
+    alert("O wins!")}
+  else if (moves [1][0]=="o" && moves [1][1]=="o" && moves [1][2]=="o"){
+    alert("O wins!")}
+  else if (moves [2][0]=="o" && moves [2][1]=="o" && moves [2][2]=="o"){
+    alert("O wins!")}
+  else if (moves [0][0]=="o" && moves [1][1]=="o" && moves [2][2]=="o"){
+    alert("O wins!")}
+  else if (moves [2][0]=="o" && moves [1][1]=="o" && moves [0][2]=="o"){
+    alert("O wins!")}
 }
-}
-*/
