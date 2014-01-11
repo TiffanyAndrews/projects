@@ -3,15 +3,22 @@
 <head>
 	<title>Tic Tac Toe</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
-<link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans|Exo+2|Allan' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {cursor: url(http://www.rw-designer.com/cursor-extern.php?id=27769);}
+</style>
+
+<script type="text/javascript" src="script.js"></script>
 
 </head>
-<body onboard="changeDiv()">
+<body onload='init()'>
 	<h1> Tic Tac Toe</h1>
-	<h2> Tech lifestyle</h2>
-	<h3> Will you Succeed?</h3>
-	<input type="button" onclick="start ()" value="Let's See!" />
-
+	<h2> Techie lifestyle</h2>
+	<!-- <h3> Will you Learn & Thrive?</h3> -->
+	<!-- <input type="button" onclick="start ()" value="Let's See!" />  -->
+<div id ="player1">
+	<h2>Player 1</h2>
+</div>
 <div class= "main"> 
 		<div class= "row">
 			<div id="one" class= "square X O"></div>
@@ -28,14 +35,19 @@
 				<div id="eight" class= "square X O"></div>
 				<div id="nine" class= "square X O"></div>
 		</div>
-<div 
-<div class="NewGame"> New Game</div>
+</div>
+
+<div id ="player2">
+	<h2>Player 2</h2>
+
+
+<!--<div class="NewGame"> New Game</div> -->
 <!--@media  to it mobile friendly. Dont forget to normailise-->
 
-<footer>SHARE
+<!--footer>SHARE
 		<div class="facebook" img src=""></div>
 		<div class="twitter"></div>
 		<div class="google+"></div>
-</footer>
+</footer> -->
 </body>
 </html>
