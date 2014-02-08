@@ -1,0 +1,2 @@
+class FitInterestController < ApplicationController
+end

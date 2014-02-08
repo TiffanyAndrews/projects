@@ -1,0 +1,16 @@
+body {
+	background-image: url('http://smallnotebook.org/wp-content/uploads/Bears-treehouse.jpg');
+}
+
+.cell {
+	 background-color: blue;
+	 width: 70px;
+	 height: 70px;
+	 margin: 5px;
+	 vertical-align: middle;
+	 cursor: pointer;
+	 float: left;
+}
+.clear {
+	clear: both;
+}

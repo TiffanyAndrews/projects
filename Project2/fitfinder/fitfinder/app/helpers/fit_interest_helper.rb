@@ -1,0 +1,2 @@
+module FitInterestHelper
+end

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+	<script type="text/javascript" src = "main3.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheet2.css">
+</head>
+<body>
+	<div x-ng-app="" x-ng-controller= "TTTCtrl">
+		Next Player:{{nextMove}} 
+		<div class="winner" x-ng-show="winner">Player {{winner}} has won!</div>
+		
+		<div id= "cell{{$index}}" class = "clear"
+			x-ng-repeat="row in gameBoard track by $index" >
+			
+			<div class="cell" x-ng-repeat="cell in row track by $index" 
+				x-ng-click= "takeTurn($parent.$index,$index)">
+				{{cell}}
+			</div>
+
+		</div>
+
+		<div><button x-ng-click="reset()">Reset Board</button></div>
+	</div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+<h1>Please fill out to Workout! </h1>
+<div class="createuser">
+<%=form_for @user do |f|%>
+<%=f.text_field :name, :placeholder => "Enter First & Last Name" %><br>
+<%=f.text_field :email, :placeholder => "Enter email" %><br>
+<%=f.text_field :username, :placeholder => "Enter your username" %><br>
+<%=f.password_field :password, :placeholder => "Enter password" %><br>
+<%=f.text_field :fit_interest, :placeholder => "Enter fitness interest" %><br>
+<%= f.submit "Sign Up" %>
+<% end %>
+</div>

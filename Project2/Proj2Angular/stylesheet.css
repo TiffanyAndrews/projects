@@ -1,0 +1,83 @@
+body {
+	background-color: #1e1e1e;
+	background-size: cover;
+	text-align: center;
+	border-radius: 50px;
+	font-size: 50px;
+
+}
+
+h1 {
+	color: #999999;
+	font-family: 'Exo 2', sans-serif;
+}
+
+h2 {
+	font-family: 'Alegreya Sans', sans-serif;
+	color: #f6de62;
+}
+.main {
+	background-color: #868686;
+	height: 620px;
+	width: 620px;
+	margin: 0 auto;
+	border-top: 15px;
+	border-left: 12px;
+	position: relative;	
+}
+.square {
+	background-color: white;
+	width: 200px;
+	height: 200px;
+	float: left;
+	border-top: 15px #868686;
+	border-left: 12px;
+	text-align: center;
+}
+#player1, #player2 {
+	width: 200px;
+	height: 200px;
+	float: right;
+	;
+
+}
+
+#one, #four, #seven, #two, #five, #eight {
+	margin-right: 10px;
+}
+#one, #two, #three, #four, #five, #six {
+	margin-bottom: 10px;
+}
+.square:hover {
+	background-color: #FF0066;
+	cursor: url(http://www.rw-designer.com/cursor-extern.php?id=27769);
+}
+
+.scoreboard {
+	background-color: black;
+	height: 200px;
+	width: 450px;
+	margin: 0 auto;
+}
+
+.tile {
+	background-color: white;
+	width: 75px;
+	height: 200px;
+	float: left;
+}
+.X, .O {
+	font-size: 100px;
+}
+.O {
+	color: #2cb6de;
+}
+.X {
+	color: #2cde7f; 
+
+}
+.NewGame {
+	height: 300px;
+	width: 300px;
+	
+}
